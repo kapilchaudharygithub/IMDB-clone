@@ -131,7 +131,7 @@ function addRemoveToFavList(id) {
 
 // Show details for a specific movie
 async function showMovieDetails(itemId) {
-  const url = `https://www.omdbapi.com/?apikey=7b6b319d&i=${itemId}`;
+  const url = `https://www.omdbapi.com/?apikey=9483c861&i=${itemId}`;
   const movieDetails = await fetchMoviesFromApi(url, "");
   const list = JSON.parse(localStorage.getItem(dbObjectFavList)) || [];
 
