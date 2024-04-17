@@ -1,48 +1,58 @@
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Remove underline from links */
 a {
   text-decoration: none;
 }
+
+/* Remove underline from links on hover */
 a:hover {
   text-decoration: none;
 }
+
+/* Remove underline from links when active */
 a:active {
   text-decoration: none;
 }
+
+/* Remove underline from visited links */
 a:visited {
   text-decoration: none;
 }
 
-/* width */
+/* Custom scrollbar width */
 *::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
+/* Track for custom scrollbar */
 *::-webkit-scrollbar-track {
   background: hsl(233, 14%, 35%);
 }
 
-/* Handle */
+/* Handle for custom scrollbar */
 *::-webkit-scrollbar-thumb {
   background: hsl(235, 24%, 19%);
 }
 
-/* Handle on hover */
+/* Handle on hover for custom scrollbar */
 *::-webkit-scrollbar-thumb:hover {
   background: hsl(233, 14%, 35%);
 }
 
+/* Body styles */
 body {
   background-color: hsla(43, 74%, 45%, 0.4);
-
   display: flex;
   justify-content: center;
 }
 
+/* Navbar styles */
 #navbar {
   display: flex;
   flex-direction: row;
@@ -53,11 +63,11 @@ body {
   height: 45px;
   box-shadow: 2px 2px 30px -10px hsl(235, 56%, 55%);
   background-color: rgba(57, 95, 170, 0.977);
-  /* Z 1 ensure that it will remain on top whos zindex value less then 1 */
-  z-index: 1;
+  z-index: 1; /* Ensure it remains on top */
   justify-content: space-between;
 }
 
+/* Logo styles */
 .top-logo {
   width: 120px;
   height: 40px;
@@ -70,6 +80,14 @@ body {
   flex-direction: column;
 }
 
+/* Horizontal line under logo */
+.top-logo hr {
+  margin-top: 2px;
+  width: 120px;
+  border: 1px hsl(233, 14%, 35%) solid;
+}
+
+/* Side drawer button styles */
 .side-drawer {
   display: flex;
   justify-content: flex-end;
@@ -77,6 +95,7 @@ body {
   flex-direction: row;
 }
 
+/* Total counter styles */
 #total-counter {
   color: rgb(238, 231, 231);
   position: relative;
@@ -89,15 +108,16 @@ body {
   text-align: center;
 }
 
+/* Hamburger menu icon styles */
 .fa-bars {
   width: 50px;
   scale: 1.5;
   color: hsl(236, 6%, 45%);
 }
 
+/* Toggle sidebar button styles */
 #toggle-sidebar {
   background-color: transparent;
-  /* border: 1px solid hsl(236, 6%, 45%); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,17 +127,13 @@ body {
   border-radius: 5px;
 }
 
+/* Toggle sidebar button hover styles */
 #toggle-sidebar:hover {
   scale: 1.2;
   transition: all ease-in-out 0.25s;
 }
 
-.top-logo hr {
-  margin-top: 2px;
-  width: 120px;
-  border: 1px hsl(233, 14%, 35%) solid;
-}
-
+/* Main content container styles */
 #main {
   display: flex;
   flex-direction: row-reverse;
@@ -125,6 +141,7 @@ body {
   height: 100vh;
 }
 
+/* Flex box styles */
 #flex-box {
   flex: 1;
   display: flex;
@@ -133,13 +150,12 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Sidebar styles */
 #sidebar {
   display: flex;
   flex: 0.2;
-
   height: 100vh;
   background-color: hsl(235, 24%, 19%);
-
   color: white;
   flex-direction: column;
   align-items: center;
@@ -148,26 +164,31 @@ body {
   max-width: 500px;
 }
 
+/* Show sidebar styles */
 #sidebar.show {
   display: flex;
   transition: all ease-in-out 0.25s;
 }
 
+/* Shrink flex box styles */
 #flex-box.shrink {
   flex: 0.8;
   transition: all ease-in-out 0.25s;
 }
 
+/* Gap at the top of the sidebar */
 .top_gap {
   height: 60px;
   width: 100%;
 }
 
+/* Small text in sidebar */
 #sidebar .small {
   font-size: 1rem;
   color: rgb(158, 153, 153);
 }
 
+/* Horizontal line in sidebar */
 #sidebar hr {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -175,8 +196,7 @@ body {
   border: 1px solid hsl(233, 14%, 35%);
 }
 
-/*********************************** test*****************/
-
+/* Favorite list container styles */
 #fav {
   display: flex;
   flex-direction: column;
@@ -186,15 +206,14 @@ body {
   align-items: center;
 }
 
+/* Favorite item styles */
 .fav-item {
   width: 80%;
   min-height: 250px;
   display: flex;
   flex-direction: column;
-
   justify-content: space-between;
   align-items: center;
-
   margin-bottom: 20px;
   background-color: hsl(234, 39%, 85%);
   color: hsl(235, 24%, 19%);
@@ -202,14 +221,17 @@ body {
   border-radius: 10%;
 }
 
+/* Favorite item hover styles */
 .fav-item:hover {
   cursor: pointer;
 }
 
+/* Favorite item photo styles */
 .fav-item-photo {
   width: 100%;
 }
 
+/* Favorite item photo image styles */
 .fav-item-photo img {
   width: 100%;
   height: 200px;
@@ -217,6 +239,7 @@ body {
   border-radius: 10%;
 }
 
+/* Favorite item details container styles */
 .fav-item-details {
   display: flex;
   flex-direction: row;
@@ -226,6 +249,7 @@ body {
   align-items: center;
 }
 
+/* Favorite like button styles */
 #fav-like-button {
   border: 1px solid hsl(233, 14%, 35%);
   border-radius: 10%;
@@ -234,12 +258,13 @@ body {
   box-shadow: 1px 1px 10px -2px rgb(146, 99, 99);
 }
 
+/* Favorite like button hover styles */
 #fav-like-button:hover {
   cursor: pointer;
-
   border-color: brown;
 }
 
+/* Empty favorite item styles */
 .fav-item.nothing {
   background-color: transparent;
   color: rgb(129, 128, 126);
@@ -247,6 +272,7 @@ body {
   text-decoration: none;
 }
 
+/* Background image styles */
 .background-image {
   position: absolute;
   top: 0;
@@ -256,16 +282,16 @@ body {
   z-index: -1;
 }
 
+/* Background image image styles */
 .background-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* object-position: left; */
-
   filter: blur(12px);
   -webkit-filter: blur(12px);
 }
 
+/* Container styles */
 .container {
   width: 100%;
   display: flex;
@@ -275,20 +301,24 @@ body {
   align-items: center;
 }
 
+/* Header styles */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Hide header styles */
 .header.hide {
   display: none;
 }
 
+/* Remove top margin from container styles */
 .container.remove-top-margin {
   margin-top: 40px;
 }
 
+/* Title styles */
 .title {
   color: rgb(247, 247, 247);
   font-size: 3rem;
@@ -298,6 +328,7 @@ body {
   text-shadow: 3px -2px 5px hsl(234, 84%, 46%);
 }
 
+/* Search bar styles */
 #search-bar {
   width: 60%;
   background-color: hsla(233, 11%, 84%, 0.662);
@@ -307,6 +338,7 @@ body {
   display: flex;
 }
 
+/* Fixed search bar styles */
 #search-bar.fixed {
   top: 0;
   position: fixed;
@@ -315,11 +347,11 @@ body {
   width: 40%;
   height: 40px;
   background-color: transparent;
-  /* background-color: rgba(21, 19, 31, 0.35); */
   transition: all ease-in-out 0.25s;
   border-radius: 15px;
 }
 
+/* Search icon styles */
 .icon {
   width: 70px;
   display: flex;
@@ -327,22 +359,25 @@ body {
   justify-content: center;
 }
 
+/* Search icon search styles */
 .icon .fa-search {
   scale: 1.3;
   color: hsl(233, 14%, 35%);
 }
 
+/* New search input styles */
 .new-search-input {
   flex-grow: 1;
-
   display: flex;
   align-items: center;
 }
 
+/* New search input form styles */
 .new-search-input form {
   flex-grow: 1;
 }
 
+/* New search input text styles */
 .new-search-input input {
   width: 100%;
   padding: 10px 0px;
@@ -353,10 +388,12 @@ body {
   font-size: 18px;
 }
 
+/* New search input placeholder styles */
 .new-search-input input::placeholder {
   color: hsl(233, 14%, 35%);
 }
 
+/* Cards holder styles */
 #cards-holder {
   width: 100%;
   height: 100vh;
@@ -364,11 +401,11 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-
   margin-top: 75px;
   padding: 0 10px;
 }
 
+/* Card styles */
 .card {
   margin: 5px;
   height: 320px;
@@ -385,18 +422,20 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
+/* Remove top margin from cards holder styles */
 #cards-holder.remove-top-margin {
   margin-top: 10px;
 }
 
+/* Card top styles */
 .card-top {
   display: flex;
   flex-direction: column;
   flex: 0.85;
-
   border-radius: 20%;
 }
 
+/* Movie poster styles */
 .movie-poster {
   width: 220px;
   overflow: hidden;
@@ -405,16 +444,16 @@ body {
   border-top-right-radius: 20px;
 }
 
+/* Movie poster image styles */
 .movie-poster img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   height: 180px;
   width: 100%;
   object-fit: cover;
-
-  /* border: solid 1px red; */
 }
 
+/* Movie name styles */
 .movie-name {
   margin-top: 5px;
   width: 100%;
@@ -424,6 +463,7 @@ body {
   font-weight: bolder;
 }
 
+/* Movie year styles */
 .movie-year {
   color: hsl(234, 54%, 30%);
   margin-top: 5px;
@@ -432,14 +472,15 @@ body {
   height: 50px;
 }
 
+/* Button styles */
 .button {
   display: inline-block;
   font-size: 1.2rem;
-
   border-radius: 10px;
   text-decoration: underline;
 }
 
+/* Card bottom styles */
 .card-bottom {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -449,28 +490,23 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-
   opacity: 1;
 }
 
+/* Card hover styles */
 .card:hover {
   transform: scale(1.1);
   transition: all ease-in-out 0.45s;
   cursor: pointer;
 }
 
+/* Card hover card bottom styles */
 .card:hover .card-bottom {
   transition: all 0.25s;
   opacity: 1;
 }
 
-/* 
-
-.card:hover img {
-    transform: scale(1.1);
-    transition: ease-in-out all .25s;
-} */
-
+/* Like styles */
 .like {
   flex: 1;
   display: flex;
@@ -480,16 +516,19 @@ body {
   color: hsl(234, 54%, 30%);
 }
 
+/* Star icon styles */
 .like .fa-star {
   margin-left: 10px;
   scale: 0.9;
   color: gray;
 }
 
+/* Active star icon styles */
 .fa-star.active {
   color: rgb(236, 233, 13);
 }
 
+/* Item details styles */
 .item-details {
   min-height: 300px;
   width: 100%;
@@ -503,9 +542,11 @@ body {
   border: 1x solid red;
 }
 
+/* Item details left styles */
 .item-details-left {
 }
 
+/* Item details left image styles */
 .item-details-left img {
   height: 250px;
   max-width: 250px;
@@ -513,6 +554,7 @@ body {
   border-radius: 20px;
 }
 
+/* Item details right styles */
 .item-details-right {
   margin-left: 30px;
   height: 90%;
@@ -523,6 +565,7 @@ body {
   overflow-y: hidden;
 }
 
+/* Card name styles */
 .card-name {
   margin-top: 30px;
   height: 30px;
@@ -531,11 +574,13 @@ body {
   text-shadow: 3px -2px 5px hsl(234, 84%, 46%);
 }
 
+/* Card name hover styles */
 .card-name:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
+/* Item text styles */
 .item-text a {
   text-decoration: none;
   color: hsl(234, 39%, 85%);
@@ -543,36 +588,43 @@ body {
   font-size: 1.2rem;
 }
 
+/* Item text styles */
 .item-text {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
   color: hsl(235, 23%, 79%);
 }
 
+/* Item text link hover styles */
 .item-text a:hover {
   text-decoration: underline;
   color: hsl(0, 0%, 96%);
 }
 
+/* Movie plot styles */
 .movie-plot {
   overflow: hidden;
   max-height: 90px;
 }
 
+/* Movie plot item text styles */
 .movie-plot > span.item-text {
   text-overflow: ellipsis;
 }
 
+/* Movie rating styles */
 .movie-rating {
   display: flex;
-
   min-height: 40px;
   align-items: center;
 }
+
+/* Movie rating item text styles */
 .movie-rating .item-text {
   margin-left: 10px;
 }
 
+/* Like button styles */
 #like-button {
   height: 40px;
   align-items: center;
@@ -584,11 +636,14 @@ body {
   color: hsl(234, 39%, 85%);
 }
 
+/* Like button hover styles */
 #like-button:hover {
   text-decoration: underline;
   cursor: pointer;
   color: hsl(0, 0%, 96%);
 }
+
+/* Active solid star icon styles */
 .fa-solid.fa-star.active {
   color: yellow;
 }
