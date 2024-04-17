@@ -192,11 +192,11 @@ async function showMovieDetails(itemId) {
 // Show Favorite Movie List
 async function showFavMovieList() {
   const favList = JSON.parse(localStorage.getItem(dbObjectFavList)) || [];
-  const url = "https://www.omdbapi.com/?apikey=7b6b319d&i=";
+  const url = "https://www.omdbapi.com/?apikey=9483c861&i=";
 
   let html = "";
   if (favList.length === 0) {
-    html = `<div class="fav-item nothing"><h1>Nothing To Show.....</h1></div>`;
+    html = `<div class="fav-item nothing"><h1>Favourite Item Not Found.....</h1></div>`;
   } else {
     for (let i = 0; i < favList.length; i++) {
       const favMovie = await fetchMoviesFromApi(url, favList[i]);
